@@ -1,3 +1,14 @@
+Solution Overview:
+
+Used Bootstrap CSS.
+Used Laravel Breeze for user authentication (Guest can only see the list of products while authenticated user can also perform CRUD operations).
+Used 1 Model: Products ( ID, name, description, price, and stock quantity).
+Used 2 Controllers: WebController (for adding/editing products forms) & ProductsController(for CRUD APIs).
+
+
+
+Installation:
+
 XAMPP installed and configured[Apache & MySQL].
 Git installed.
 Basic knowledge of using the terminal/command line.
