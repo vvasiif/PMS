@@ -16,11 +16,10 @@
 
 </head>
 
-<body class="">
+<body class="antialiased">
     <div class="container">
         <div class="nav-bar">
 
-           
             <div class="">
                 <a href="/api/products">
                     <h4>PMS</h4>
@@ -36,36 +35,51 @@
                         <h4>Log out</h4>
                     </button>
                 </form>
-
-
-
             </div>
         </div>
 
         <div class="mt-5">
-            <a class="add-btn" href="/addform">Add new product</a>
+            <a class="add-btn" href="/api/products">Products list</a>
         </div>
-        <div class="mt-3 mb-3">
-            <div class="row">
-                @foreach ($products as $product)
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="/api/products/{{ $product->id }}" class="product-link">
-                        <div class="product-card mt-3">
-                            <h4>Product Id: {{ $product->id }}</h4>
-                            <h2 class="mt-2">{{ $product->name }}</h2>
-                            <p class="product-description">{{ substr($product->description, 0, 50) }}...</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <h5>Rs. {{ $product->price }}</h5>
-                                <div>
-                                    <h5><strong>Quantity: </strong> {{ $product->stock_quantity }}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+
+        <div class="cen-form">
+            <form action="{{ url('/') }}/api/products" method="post" enctype="multipart/form-data">
+
+                @csrf
+                <h3>Add Product</h3>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputField">Product Name</label> <br>
+                    <input class="mt-1" name="name" type="text" class="form-control" id="exampleInputField"
+                        required>
                 </div>
-            @endforeach
-            </div>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputField">Product Description</label> <br>
+                    <textarea name="description"></textarea>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputField">Price</label> <br>
+                    <input class="mt-1" name="price" type="number" class="form-control" id="exampleInputField"
+                        required>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputField">Quantity</label> <br>
+                    <input class="mt-1" name="quantity" type="number" class="form-control" id="exampleInputField"
+                        required>
+                </div>
+
+                <button class="mt-4" type="submit">Add</button>
+
+            </form>
         </div>
+    </div>
+
+
+    </form>
+    </div>
     </div>
 
 

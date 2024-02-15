@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+body {
+    background: #111827;
+
+}
+
+.nav-bar {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar a,
+h4 {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.nav-li{
+    display: flex;
+    gap: 10px;
+}
+
+.logout-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cen-form {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.cen-form form {
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #1F2937;
+    min-width: 300px;
+}
+
+.cen-form h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+}
+
+.cen-form p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.cen-form a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cen-form button {
+    background-color: #111827;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.cen-form button:hover {
+    background-color: #151e31;
+}
+
+.cen-box {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.box-det {
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #1F2937;
+    min-width: 300px;
+}
+
+.cen-box h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+}
+
+.cen-box p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.cen-box a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cen-box button {
+    background-color: #111827;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.cen-box button:hover {
+    background-color: #151e31;
+}
+
+label {
+    color: #fff;
+    font-size: 15px;
+}
+
+input {
+    outline: none;
+    width: 400px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+
+    outline: none;
+    width: 400px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+
+    background-color: #FFFFFF;
+}
+
+.add-btn {
+    text-decoration: none;
+    background-color: #00be8f;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.add-btn:hover {
+    background-color: #04a57d;
+}
+
+.del-btn {
+    background-color: #ff6161 !important;
+}
+
+.del-btn:hover {
+    background-color: #f85050 !important;
+}
+
+
+.product-card {
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #1F2937;
+    color: #fff;
+}
+
+.product-card:hover {
+    background-color: #3b495e;
+}
+
+
+.product-description {
+    min-height: 60px;
+}
+
+.err-msg{
+    color: #f85050 !important;
+}
+
+
+@media (max-width: 576px) {
+    input {
+        outline: none;
+        width: 300px;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    textarea {
+        height: 100px;
+        outline: none;
+        width: 300px;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 15px;
+    
+        background-color: #FFFFFF;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {}

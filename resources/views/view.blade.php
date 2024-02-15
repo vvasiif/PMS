@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="">
+<body class="antialiased">
     <div class="container">
         <div class="nav-bar">
 
@@ -36,36 +36,56 @@
                         <h4>Log out</h4>
                     </button>
                 </form>
-
-
-
             </div>
         </div>
 
         <div class="mt-5">
-            <a class="add-btn" href="/addform">Add new product</a>
+            <a class="add-btn" href="/api/products">Products list</a>
         </div>
-        <div class="mt-3 mb-3">
-            <div class="row">
-                @foreach ($products as $product)
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="/api/products/{{ $product->id }}" class="product-link">
-                        <div class="product-card mt-3">
-                            <h4>Product Id: {{ $product->id }}</h4>
-                            <h2 class="mt-2">{{ $product->name }}</h2>
-                            <p class="product-description">{{ substr($product->description, 0, 50) }}...</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <h5>Rs. {{ $product->price }}</h5>
-                                <div>
-                                    <h5><strong>Quantity: </strong> {{ $product->stock_quantity }}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+
+        <div class="cen-box">
+            <div class="box-det">
+                <h3>Product details</h3>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputField">Product Name</label> <br>
+                    <p>{{ $product->name }}</p>
                 </div>
-            @endforeach
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputField">Product Description</label> <br>
+                    <p>{{ $product->description }}</p>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputField">Price</label> <br>
+                    <p>Rs. {{ $product->price }}</p>
+
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="exampleInputField">Quantity</label> <br>
+                    <p>{{ $product->stock_quantity }}</p>
+
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <button class="edit-btn" type="submit"><a
+                            href="{{ url('/updateform/' . $product->id) }}">Edit</a></button>
+                    <form action="{{ url('/api/products/' . $product->id) }}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="del-btn">Delete</button>
+                    </form>
+                </div>
+
             </div>
         </div>
+    </div>
+
+
+    </form>
+    </div>
     </div>
 
 
